@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap");
-
 :root {
   color-scheme: light;
   --ink: #17231f;
@@ -10,9 +8,9 @@
   --line: #dedfd7;
   --green: #b7ee76;
   --green-deep: #658d39;
-  --display-font: "Manrope", "DM Sans", sans-serif;
-  --body-font: "DM Sans", sans-serif;
-  --mono-font: "DM Mono", monospace;
+  --display-font: "Avenir Next", "Segoe UI", sans-serif;
+  --body-font: "Avenir Next", "Segoe UI", sans-serif;
+  --mono-font: "SFMono-Regular", Consolas, monospace;
 }
 
 * {
