@@ -1,21 +1,49 @@
-# Kirishana Kiritharan — Portfolio
+# Kirishana Kiritharan | Personal Website
 
-A responsive, static portfolio site built with HTML and CSS. The website source is in
-[`site/`](./site), separate from the source CV in `doc/`.
+A modern, responsive personal website based on my CV. It presents my profile, professional
+experience, projects, education and contact details, and works on desktop, tablet and
+mobile devices.
 
-## GitHub Pages deployment
+## Project structure
 
-The workflow in [`.github/workflows/deploy-pages.yml`](./.github/workflows/deploy-pages.yml)
-deploys the contents of `site/` to GitHub Pages after every push to `main`. It can also
-be started manually from the repository’s **Actions** tab.
+| Folder or file | Purpose |
+| :--- | :--- |
+| [`site/`](./site) | Website source: `index.html` (content) and `styles.css` (design) |
+| [`doc/`](./doc) | Source CV in Word format (not published) |
+| [`.github/workflows/`](./.github/workflows) | Automatic deployment to GitHub Pages |
+| [`PROMPT.md`](./PROMPT.md) | The CRAFT prompt used to create the website |
 
-To publish the site:
+## Features
 
-1. Push this project to a GitHub repository using the `main` branch.
-2. In the repository’s **Settings → Pages**, set the build and deployment source to
-   **GitHub Actions** if it is not already selected.
-3. Allow the workflow to run. The published URL will appear in the workflow run and
-   the repository’s Pages settings.
+* Single page layout with sections for profile, experience, projects, education and contact
+* Responsive design built with CSS Grid, Flexbox and fluid typography
+* Accessible markup: semantic HTML, skip link, visible focus styles and reduced motion support
+* No frameworks and no build step: plain HTML and CSS only
+* Private CV details (address, phone number, references) are not published
 
-Only `site/` is uploaded as the website artifact; the CV and other repository files
-are not included in the deployed site.
+## Local preview
+
+Open `site/index.html` directly in a browser, or start a small local server:
+
+```bash
+cd site
+python3 -m http.server 8000
+```
+
+Then visit <http://localhost:8000>.
+
+## Deployment to GitHub Pages
+
+The [deployment workflow](./.github/workflows/deploy-pages.yml) publishes the contents of
+`site/` to GitHub Pages after every push to the `main` branch. It can also be started
+manually from the **Actions** tab of the repository.
+
+To publish the website:
+
+1. Push this project to a GitHub repository on the `main` branch.
+2. Open **Settings › Pages** and set the source to **GitHub Actions**.
+3. Wait for the workflow to finish. The public URL is shown in the workflow run and in
+   the Pages settings.
+
+Only the `site/` folder is deployed. The CV and all other repository files remain private
+to the repository.
